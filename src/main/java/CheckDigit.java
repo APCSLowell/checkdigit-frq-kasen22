@@ -8,8 +8,8 @@ public class CheckDigit
    public static int getCheck(int num) 
    {  
      int count = 0;
-     for ( int i = 1; i < getNumberOfDigits(num);i++){
-       count = count + (8-i) * getDigit(num, i);
+     for ( int i = 1; i <= getNumberOfDigits(num);i++){
+       count = count + ((8-i) * getDigit(num, i));
      }
      return count % 10;
    }
@@ -24,7 +24,8 @@ public class CheckDigit
    {      
      int check = numWithCheckDigit % 10;
      int num = numWithCheckDigit/10;
-     if (check == getCheck(num)){
+     int newCheck = getCheck(num);
+     if (check == newCheck){
        return true;
      }else{
      return false;
