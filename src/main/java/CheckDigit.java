@@ -26,8 +26,9 @@ public class CheckDigit
      int num = numWithCheckDigit/10;
      if (check == getCheck(num)){
        return true;
-     }
+     }else{
      return false;
+     }
    }    
    
    /** Returns the number of digits in num. */    
